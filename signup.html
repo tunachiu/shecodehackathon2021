@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đăng ký tài khoản</title>
+	<link rel="shortcut icon" type="image/png" href="./images/leaf (1).png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">      
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="style_for_posting_page.css" rel="stylesheet">
+  </head>
+
+ <body>
+    <style>
+        body {
+          background-image: url('https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80');
+          background-repeat: no-repeat;
+        }
+        </style>
+  <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-branch" href="index.html">
+			<img src="./images/logo.png" height="50" width="200">
+		
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+					<a class="nav-link" href="#">TRANG CHỦ</a>
+				</li>
+			</ul>
+		</br>
+</nav>
+
+<div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form action="/action_page.php">
+  
+          <div class="row">
+            <div class="col-50"><br/>
+              <h1>Đăng ký tài khoản</h1>
+              <label for="fname"><i class="fa fa-user"></i> Tên Tài Khoản</label>
+              <input type="text" id="fname" name="firstname" placeholder="Nhập tên tài khoản">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="Nhập email">
+              <label for="password">Mật khẩu</label>
+              <input type="text" id="password" name="password" placeholder="Nhập mật khẩu">
+              <label for="password">Xác nhận mật khẩu</label>
+              <input type="text" id="password" name="password" placeholder="Nhập lại mật khẩu">
+              <input type="text" id="year" name="year" placeholder="Năm sinh">
+
+              <div class="row">
+                <div class="col-25">
+                 <label for="year">Năm sinh</label>
+              <select id="year" name="year">
+              <option>Chọn năm sinh</option>    
+              <option value="1930">1930</option>
+              <option value="1940">1940</option>
+              <option value="1950">1950</option>
+              <option value="1960">1960</option>
+              <option value="1970">1970</option>
+              <option value="1980">1980</option>
+              <option value="1990">1990</option>
+              <option value="1995">1995</option>
+              <option value="2000">2000</option>
+              <option value="2002">2002</option>
+            </select>
+                </div>
+
+                <div class="col-25">
+                    <label for="month">Tháng sinh</label>
+                    <select id="month" name="month">
+                    <option>Chọn tháng sinh</option>    
+                    <option value="Jan">Tháng 1</option>
+                    <option value="Feb">Tháng 2</option>
+                    <option value="Mar">Tháng 3</option>
+                    <option value="Apr">Tháng 4</option>
+                    <option value="May">Tháng 5</option>
+                    <option value="Jun">Tháng 6</option>
+                    <option value="Jul">Tháng 7</option>
+                    <option value="Aug">Tháng 8</option>
+                    <option value="Sep">Tháng 9</option>
+                    <option value="Oct">Tháng 10</option>
+                    <option value="Nov">Tháng 11</option>
+                    <option value="Dec">Tháng 12</option>
+                  </select>
+                </div>
+
+                <div class="col-25">
+                    <label for="day">Ngày sinh</label>
+                    <select id="day" name="day">
+                    <option>Chọn tháng sinh</option>    
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                </div>
+              </div>
+
+
+            </div>
+  
+            <div class="col-50"><br/>
+                <label for="gender">Giới tính</label>
+                <select id="gender" name="gender">
+                <option>Chọn giới tính</option>    
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+                <option value="other">Khác</option>
+              </select>
+
+              <label for="phone">Số điện thoại</label>
+              <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại">
+              <!-- Chọn địa chỉ - thành phố--> 
+              <label for="City">Tỉnh / Thành phố</label>
+              <select class = "City">
+                <optgroup label="Cities">
+                <option>Chọn Tỉnh / Thành phố</option>
+                <option>Hà Nội</option>
+                <option>Thành phố Hồ Chí Minh</option>
+            </optgroup>
+              </select>
+<!-- Chọn địa chỉ - quận huyện--> 
+            <label for="District">Quận/ Huyện</label>
+            <select class = "District">
+                <optgroup label="Hà Nội">
+                <option>Chọn Quận / Huyện</option>
+                <option>Hai Bà Trưng</option>
+                <option>Ba Đình</option>
+                <option>Thạch Thất</option>
+                <option>Quốc Oai</option>
+            </optgroup>
+
+                <optgroup label="Thành phố Hồ Chí Minh">
+                <option>Quận 1</option>
+                <option>Quận 12</option>
+                <option>Thành phố Thủ Đức</option>
+                <option>Huyện Nhà Bè</option>
+            </optgroup>
+              </select>
+<!-- Nhập tên xã phường --> 
+            <label for="Xa">Xã/ Phường</label>
+            <input type="text" id="Xa" name="Xa" placeholder="Nhập tên xã / phường">
+
+            <label for="home_number">Địa chỉ chi tiết</label>
+            <input type="text" id="home_number" name="home_number" placeholder="Nhập số nhà và tên đường">
+  
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="signin"> Ghi nhớ đăng nhập
+          </label>
+          <input type="submit" value="Hoàn tất đăng ký" class="btn">
+        </form>
+      </div>
+    </div>
+  
+ <!--Chân trang-->
+ <footer>
+    <div class="container-fluid padding">	
+        <div class="row text-center">
+            <div class="col-md-4">
+                <hr class="light">
+                <div class = "footer-caption"> 
+                <h6>Công ty TNHH Nông Sản Newbie</h6>
+                <hr class="light">
+                <p>111-222-3333</p>
+                <p>nongsanvui@gmail.com</p>
+                <p>Giai Phong street, Hai Ba Trung Distr Hanoi, Vietnam</p></div>
+               
+            </div>
+            <div class="col-md-4">				
+                <hr class="light">
+                <div class = "footer-caption">
+                <h6>Thông tin doanh nghiệp</h6>
+                <hr class="light">
+                <p>Mã số doanh nghiệp: 1234</p>
+                <p>Do Sở Công thương cấp ngày 01/01/2020</p></div>
+            </div>
+            <div class="col-md-4">				
+                <hr class="light">
+                <div class = "footer-caption">
+                <h6>Chính sách</h6>
+                <hr class="light">
+                <a href="#">Chính sách hoạt động</a></br>
+                <a href="#">Chính sách bảo mật</a></br>
+                <a href="#">Quyền và nghĩa vụ</a></br></div>
+            </div>
+            <div class="col-12">
+                <hr class="light-100">
+                <h6>&copy; Bản quyền thuộc về NongSanVui.vn</h6>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>	

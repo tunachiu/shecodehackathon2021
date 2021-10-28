@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sản phẩm theo danh mục</title>
+	<link rel="shortcut icon" type="image/png" href="./images/leaf (1).png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">      
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+  </head>
+ <body>
+  <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-branch" href="index.html">
+			<img src="./images/logo.png" height="50" width="200">
+		<!-- Thanh tìm kiếm-->
+		<form><input type="text" name="search" placeholder="Tìm sản phẩm..."></form>
+		
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#">SẢN PHẨM HOT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">ĐĂNG SẢN PHẨM</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">CHAT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">ĐÃ LƯU</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">HỒ SƠ USER</a>
+				</li>
+                <li class="nav-item">
+					<a class="nav-link" href="#">TRANG CHỦ</a>
+				</li>
+			</ul>
+		</br>
+</nav>
+<!-- Grid System -->
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+          <br/>
+          <!-- Bộ lọc -->
+           <h6>Bộ lọc</h6>
+          <hr class="light">
+          <div class = "filter-check">
+            Theo nơi bán:<br/>
+            <input type = "checkbox" name="address"> Trong bán kính 2km<br/>
+            <input type = "checkbox" name="address"> Trong bán kính 5km<br/>
+            <input type = "checkbox" name="address"> Trong bán kinh 10km<br/>
+            <input type = "checkbox" name="address"> Trong bán kính 20km<br/>
+            <input type = "checkbox" name="address"> Hà Nội<br/>
+            <input type = "checkbox" name="address"> Thành phố Hồ Chí Minh<br/>
+            <input type = "checkbox" name="address"> Hải Phòng<br/>
+            <input type = "checkbox" name="address"> Quảng Ninh<br/>
+            <input type = "checkbox" name="address"> Thái Nguyên<br/>
+            <input type = "checkbox" name="address"> Đà Nẵng<br/>
+            <input type = "checkbox" name="address"> Bình Dương<br/>
+            <input type = "checkbox" name="address"> Đồng Nai<br/>
+            <input type = "checkbox" name="address"> Cần Thơ<br/>
+            <input type = "checkbox" name="address"> Đồng Tháp<br/>
+            <input type = "checkbox" name="address"> Vĩnh Long<br/>
+            <a href="#">Khác ></a>
+            <hr class="light">
+          </div>
+        
+          <div class = "filter-check">
+            Theo chứng chỉ an toàn thực phẩm:<br/>
+            <input type = "checkbox" name="address"> Chứng nhận VietGap<br/>
+            <input type = "checkbox" name="address"> Chứng chỉ ISO 22000<br/>
+            <input type = "checkbox" name="address"> Chứng chỉ FSSC 22000<br/>
+            <input type = "checkbox" name="address"> Chứng chỉ HACCP<br/>
+            <input type = "checkbox" name="address"> Chứng chỉ GMP<br/>
+            <input type = "checkbox" name="address"> Chứng chỉ BRC<br/>
+            <input type = "checkbox" name="address"> Chứng chỉ IFS<br/>
+            <input type = "checkbox" name="address"> Các loại chứng nhận VSATTP khác<br/>
+            <input type = "checkbox" name="address"> Chưa có chứng nhận<br/>
+            <hr class="light">
+          </div>
+          <div class = "filter-check">
+            Theo khoảng giá:<br/>
+            <select>
+                <option>Giá chợ</option>
+                <option>Giá siêu thị</option>
+                <option>Thực phẩm cao cấp</option>
+            </select>
+          </div>
+          <div class = "filter-check"><br/>
+            <a href="#" class="btn btn-outline-secondary">Áp dụng</a>
+            <a href="#" class="btn btn-outline-secondary">Reset</a>
+          </div>
+        </div>
+
+<div class="col-9"><br/>            
+    <table>
+        <tr>
+            <th scope="col"><img src="./images/paper.png" height = "30"></th>
+            <th scope="col">    </th>
+            <th scope="col"> Các sản phẩm thuộc danh mục THỊT </th> <!--Đoạn này backend hiển thị tên danh mục mà người dùng đã chọn nhé-->
+        </tr>
+    </table>
+         <!--Khung hiển thị sắp xếp kết quả theo thư mục-->
+        <div class = "product-order">
+            Sắp xếp theo
+            <a href="#" class="btn btn-outline-primary">Liên quan</a>
+            <a href="#" class="btn btn-outline-primary">Mới nhất</a>
+            <a href="#" class="btn btn-outline-primary">Yêu thích nhất</a>
+            <select>
+                <option>Giá: Thấp đến cao</option>
+                <option>Giá: Cao đến thấp</option>
+            </select>
+        </div>
+        <!-- Hiển thị sản phẩm -->
+        <div class="container-fluid padding">
+            <div class="row padding">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/prdc1.jpg"> <!-- Ảnh spham demo 1 -->
+                        <div class="card-prod-body">
+                            <p>Ba chỉ bò Mỹ</p>
+                            <h5 class="price">150.000đ</h5>
+                            <a href="#" class="btn btn-outline-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/productc2.jpg"> <!-- Ảnh spham demo 2 -->
+                        <div class="card-prod-body">
+                            <p>Gà Tây nguyên con</p>
+                            <h5 class="price">70.000đ</h5>
+                            <a href="#" class="btn btn-outline-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/prdc3.jpg"> <!-- Ảnh spham demo 3 -->
+                        <div class="card-prod-body">
+                            <p>Thịt cừu loại 1</p>
+                            <h5 class="price">1.000.000đ</h5>
+                            <a href="#" class="btn btn-outline-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/prdc4.jpg"> <!-- Ảnh spham demo 4 -->
+                        <div class="card-prod-body">
+                            <p>Thịt cừu loại 2</p>
+                            <h5 class="price">500.000đ</h5>
+                            <a href="#" class="btn btn-outline-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/prdc5.jpg"> <!-- Ảnh spham demo 5 -->
+                        <div class="card-prod-body">
+                            <p>Thịt ba chỉ</p>
+                            <h5 class="price">75.000đ</h5>
+                            <a href="#" class="btn btn-outline-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/prdc6.jpg"> <!-- Ảnh spham demo 6 -->
+                        <div class="card-prod-body">
+                            <p>Thịt cừu Úc</p>
+                            <h5 class="price">900.000đ</h5>
+                            <a href="#" class="btn btn-outline-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/prdc7.jpg"> <!-- Ảnh spham demo 7 -->
+                        <div class="card-prod-body">
+                            <p>Nhân Hamburger</p>
+                            <h5 class="price">300.000đ</h5>
+                            <a href="#" class="btn btn-outline-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/prdc8.jpg"> <!-- Ảnh spham demo 8 -->
+                        <div class="card-prod-body">
+                            <p>Gà tây</p>
+                            <h5 class="price">65.000đ</h5>
+                            <a href="#" class="btn btn-outline-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class = "row text-center">
+			<div class="col-11"><br/>
+            <a href="#" class="btn btn-outline-secondary">Xem thêm sản phẩm</a>
+            </div>
+        </div>
+</div>
+
+    
+        <!--Chân trang-->
+        <footer>
+            <div class="container-fluid padding">	
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <hr class="light">
+                        <div class = "footer-caption"> 
+                        <h6>Công ty TNHH Nông Sản Newbie</h6>
+                        <hr class="light">
+                        <p>111-222-3333</p>
+                        <p>nongsanvui@gmail.com</p>
+                        <p>Giai Phong street, Hai Ba Trung Distr Hanoi, Vietnam</p></div>
+                       
+                    </div>
+                    <div class="col-md-4">				
+                        <hr class="light">
+                        <div class = "footer-caption">
+                        <h6>Thông tin doanh nghiệp</h6>
+                        <hr class="light">
+                        <p>Mã số doanh nghiệp: 1234</p>
+                        <p>Do Sở Công thương cấp ngày 01/01/2020</p></div>
+                    </div>
+                    <div class="col-md-4">				
+                        <hr class="light">
+                        <div class = "footer-caption">
+                        <h6>Chính sách</h6>
+                        <hr class="light">
+                        <a href="#">Chính sách hoạt động</a></br>
+                        <a href="#">Chính sách bảo mật</a></br>
+                        <a href="#">Quyền và nghĩa vụ</a></br></div>
+                    </div>
+                    <div class="col-12">
+                        <hr class="light-100">
+                        <h6>&copy; Bản quyền thuộc về NongSanVui.vn</h6>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </body>
+        </html>	
+    
